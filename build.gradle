@@ -14,6 +14,11 @@ dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
+// Helps faster load times in Crio workspace.
+allprojects {
+    buildDir = '/tmp/external_build'
+}
+
 run {
     mainClassName = "com.crio.shorturl.XUrlMain"
     enableAssertions = true
